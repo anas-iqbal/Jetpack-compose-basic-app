@@ -12,19 +12,12 @@ UI/UX:
 
 Built entirely in Jetpack Compose.
 
-Theme-aware dark/light styling.
-
-Smooth keyboard handling and scrolling on forms.
-
-Action Bar navigation and icons.
-
 Reusable text input and error components.
 
-Validation: Client-side email and password validation with instant feedback.
+Tests: Repository/data layer is unit tested(not all cases)
 
-Tests: Repository/data layer is unit tested using in-memory Room database.
+Architecture I tried to follow
 
-Architecture
 MVVM with clean separation:
 
 ViewModel: Manages state and business logic.
@@ -40,27 +33,5 @@ SessionManager: Reads/writes session state (logged-in user) in SharedPreferences
 
 UserViewModel: Exposes login/register logic and session state as Compose state flows.
 
-Screens:
-
-LoginScreen and RegistrationScreen: Use reusable input and error text fields, support full scrolling and accessibility.
-
-Reusable Components:
-
-TextField, ErrorText: For consistent UI and easy code maintenance.
-
-File/Folder Structure
-text
-/data
-  /local/user          
-  SessionManager.kt
-  /repositories
-    UserRepository.kt
-/viewmodels
-  UserViewModel.kt
-/ui
-  /components          # Reusable composables like TextField, ErrorText
-  /screens/login
-  /screens/registration
-MainActivity.kt
 
 
